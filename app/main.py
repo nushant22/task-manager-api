@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+    title = "Task Manager API",
+    description = "A REST API for managing tasks with JWT authentication",
+    version = "1.0.0"
+)
 
 @app.get("/")
 def read_root():
